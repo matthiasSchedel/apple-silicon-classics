@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="Vote on classic Windows games to resurrect on Apple Silicon Macs.">
+    <title>Classics on Apple Silicon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#wishlist">Skip to wishlist</a>
+    <div class="scanlines" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Classics on Apple Silicon home">
+        <span class="brand-mark">68K</span>
+        <span>Classics on Apple Silicon</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#working">Working</a>
+        <a href="#wishlist">Vote</a>
+        <a href="#method">Method</a>
+        <a href="https://github.com/matthiasSchedel/apple-silicon-classics">GitHub</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">☼</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Wine wrappers · CrossOver · cnc-ddraw · OpenRA leads</p>
+          <h1 id="hero-title">Classic Windows games. Apple Silicon Macs. Resurrected.</h1>
+          <p class="subhead">A public queue for the next reverse-engineered recipes: what already boots, what only reaches a menu, and what should get the next test slot.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#wishlist">Vote for the next port</a>
+            <a class="button secondary" href="#working">See proven recipes</a>
+          </div>
+        </div>
+        <aside class="status-terminal" aria-label="Current project statistics">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <dl class="stat-grid">
+            <div>
+              <dt>working</dt>
+              <dd data-stat="working">--</dd>
+            </div>
+            <div>
+              <dt>partial</dt>
+              <dd data-stat="partial">--</dd>
+            </div>
+            <div>
+              <dt>votes cast</dt>
+              <dd data-stat="votes">--</dd>
+            </div>
+          </dl>
+          <p class="terminal-line" data-api-state>GitHub issue vote feed initializing...</p>
+        </aside>
+      </section>
+
+      <section class="section" id="working" aria-labelledby="working-title">
+        <div class="section-head">
+          <p class="eyebrow">Verified recipes and honest partials</p>
+          <h2 id="working-title">Working titles grid</h2>
+        </div>
+        <div class="tested-grid" data-tested-grid></div>
+      </section>
+
+      <section class="section vote-section" id="wishlist" aria-labelledby="wishlist-title">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow">One GitHub issue per game</p>
+            <h2 id="wishlist-title">Vote queue</h2>
+          </div>
+          <div class="filter-strip" role="search">
+            <label for="search">Filter</label>
+            <input id="search" data-search type="search" placeholder="Westwood, 1998, Diablo...">
+          </div>
+        </div>
+        <div class="wishlist-grid" data-wishlist-grid></div>
+      </section>
+
+      <section class="method" id="method" aria-labelledby="method-title">
+        <div>
+          <p class="eyebrow">Methodology</p>
+          <h2 id="method-title">How a game earns a green badge</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3>1. Isolated bottles</h3>
+            <p>Each attempt uses a separated Whisky, CrossOver, or native path so registry edits, DLL overrides, and renderers do not pollute other tests.</p>
+          </article>
+          <article>
+            <h3>2. Visual proof</h3>
+            <p>Playable means more than a process staying alive: the test needs a visible state, input-driven transition, and a repeatable recipe.</p>
+          </article>
+          <article>
+            <h3>3. Public trail</h3>
+            <p>Recipes live in linked GitHub repos. Sanitized evidence for this site is in <a href="data/evidence.json">data/evidence.json</a> and the live source of truth is <a href="games.json">games.json</a>.</p>
+          </article>
+          <article>
+            <h3>4. Voting</h3>
+            <p>Wishlist votes are GitHub issue thumbs-up reactions. The site reads anonymous REST API counts and sends voters to GitHub for the actual reaction.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built from a Codex 5.5 + Claude retro-RTS testing session. No game files, keys, or private vault paths are shipped.</p>
+      <a href="https://github.com/matthiasSchedel/apple-silicon-classics">Source on GitHub</a>
+    </footer>
+
+    <template id="tested-card-template">
+      <article class="tested-card">
+        <div class="media"></div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="badge"></span>
+            <span class="year"></span>
+          </div>
+          <h3></h3>
+          <p class="summary"></p>
+          <div class="card-footer">
+            <span class="recipe"></span>
+            <a class="repo-link" target="_blank" rel="noreferrer">Recipe</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="wishlist-card-template">
+      <article class="wishlist-card">
+        <div class="wishlist-meta">
+          <span class="family"></span>
+          <span class="year"></span>
+        </div>
+        <h3></h3>
+        <p></p>
+        <div class="vote-row">
+          <a class="vote-button" target="_blank" rel="noreferrer">Vote on GitHub</a>
+          <span class="vote-count" aria-live="polite">-- votes</span>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

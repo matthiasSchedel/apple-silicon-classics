@@ -1,0 +1,36 @@
+{
+  "generated": "2026-05-23",
+  "privacy": "Local orchestrator paths and the private Obsidian vault path are intentionally omitted. Public evidence is the site data plus linked GitHub recipe repositories.",
+  "testedEvidence": [
+    {
+      "slug": "starcraft-bw",
+      "round": "r5",
+      "verdict": "partial",
+      "proof": "Main menu visible through CrossOver 26.1.0; Esc input advanced through intro; mouse activation not yet proven.",
+      "publicRepo": "https://github.com/matthiasSchedel/starcraft-bw-mac"
+    },
+    {
+      "slug": "dune-2000",
+      "round": "r5",
+      "verdict": "partial",
+      "proof": "Main menu visible in a real captureable macOS window; click-driven transition not yet proven.",
+      "publicRepo": "https://github.com/matthiasSchedel/dune-2000-mac"
+    },
+    {
+      "slug": "pharaoh",
+      "round": "prod",
+      "verdict": "partial",
+      "proof": "Intro/title renders through Whisky + cnc-ddraw; input/focus blocked before main menu.",
+      "publicRepo": "https://github.com/matthiasSchedel/pharaoh-whisky-m1"
+    }
+  ],
+  "sourceRepos": [
+    "https://github.com/matthiasSchedel/age-of-empires-mac",
+    "https://github.com/matthiasSchedel/battle-realms-mac",
+    "https://github.com/matthiasSchedel/emperor-rotmk-whisky-m1",
+    "https://github.com/matthiasSchedel/ancient-conquest-macos",
+    "https://github.com/matthiasSchedel/starcraft-bw-mac",
+    "https://github.com/matthiasSchedel/dune-2000-mac",
+    "https://github.com/matthiasSchedel/pharaoh-whisky-m1"
+  ]
+}
