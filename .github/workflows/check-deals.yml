@@ -1,0 +1,37 @@
+name: Check classic game deals
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: check-classic-game-deals
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install requests
+      - name: Check deals
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/check_deals.py
+      - name: Commit price history if changed
+        run: |
+          git config user.email "noreply@github.com"
+          git config user.name "Deals Watcher"
+          git add data/price-history.json
+          git diff --cached --quiet || git commit -m "chore: update price history"
+          git push
