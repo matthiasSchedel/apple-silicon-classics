@@ -9,6 +9,12 @@ const state = {
   search: ""
 };
 
+function platformClass(platformClassName) {
+  if (platformClassName === "native-arm64") return "platform-native";
+  if (platformClassName === "crossover") return "platform-crossover";
+  return "platform-whisky";
+}
+
 function statusClass(status) {
   if (status === "working") return "badge-working";
   if (status === "working-partial") return "badge-working-partial";
@@ -44,6 +50,9 @@ function renderTested(tested) {
 
     badge.textContent = game.statusLabel;
     badge.classList.add(statusClass(game.status));
+    const platform = qs(".platform-badge", node);
+    platform.textContent = game.platformLabel || game.recipe;
+    platform.classList.add(platformClass(game.platformClass));
     qs(".year", node).textContent = game.year;
     qs("h3", node).textContent = game.title;
     qs(".summary", node).textContent = game.summary;
@@ -87,12 +96,12 @@ function renderWishlist() {
 
 function renderStats() {
   const tested = state.data.tested;
-  const working = tested.filter((game) => game.status === "working" || game.status === "working-partial").length;
-  const partial = tested.filter((game) => game.status === "partial").length;
+  const working = tested.length;
+  const wishlist = state.data.wishlist.length;
   const votes = [...state.issueByTitle.values()].reduce((sum, issue) => sum + (issue.reactions?.["+1"] || 0), 0);
 
   qs('[data-stat="working"]').textContent = working;
-  qs('[data-stat="partial"]').textContent = partial;
+  qs('[data-stat="wishlist"]').textContent = wishlist;
   qs('[data-stat="votes"]').textContent = votes;
 }
 

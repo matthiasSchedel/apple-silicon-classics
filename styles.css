@@ -447,12 +447,42 @@ h3 {
   gap: 0.75rem;
 }
 
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
 .badge,
+.platform-badge,
 .family {
   color: var(--green);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.badge,
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  padding: 0.14rem 0.38rem;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.platform-native {
+  color: var(--green);
+}
+
+.platform-crossover {
+  color: var(--magenta);
+}
+
+.platform-whisky {
+  color: var(--cyan);
 }
 
 .year,

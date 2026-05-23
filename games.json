@@ -17,7 +17,9 @@
       "summary": "Main menu, base game, Rise of Rome, saves, and one-click launcher verified on Apple Silicon.",
       "repo": "https://github.com/matthiasSchedel/age-of-empires-mac",
       "image": "",
-      "imageAlt": "Generated terminal-style panel for Age of Empires; no public screenshot was available in the source repository."
+      "imageAlt": "Generated terminal-style panel for Age of Empires; no public screenshot was available in the source repository.",
+      "platformLabel": "Whisky/GPTK",
+      "platformClass": "whisky-gptk"
     },
     {
       "slug": "battle-realms",
@@ -29,7 +31,9 @@
       "summary": "Single-player gameplay works with minor hangs; main-menu rendering has cosmetic DirectDraw artifacts.",
       "repo": "https://github.com/matthiasSchedel/battle-realms-mac",
       "image": "",
-      "imageAlt": "Generated terminal-style panel for Battle Realms; no public screenshot was available in the source repository."
+      "imageAlt": "Generated terminal-style panel for Battle Realms; no public screenshot was available in the source repository.",
+      "platformLabel": "Whisky/GPTK",
+      "platformClass": "whisky-gptk"
     },
     {
       "slug": "emperor-rotmk",
@@ -41,7 +45,9 @@
       "summary": "Sierra/Impressions DirectDraw path works through cnc-ddraw with audio registry tuning and a launcher.",
       "repo": "https://github.com/matthiasSchedel/emperor-rotmk-whisky-m1",
       "image": "",
-      "imageAlt": "Generated terminal-style panel for Emperor; no public screenshot was available in the source repository."
+      "imageAlt": "Generated terminal-style panel for Emperor; no public screenshot was available in the source repository.",
+      "platformLabel": "Whisky/GPTK",
+      "platformClass": "whisky-gptk"
     },
     {
       "slug": "ancient-conquest",
@@ -53,7 +59,9 @@
       "summary": "Windowed DirectDraw recipe works; campaign loads and saving works. Alt-tab black-screen remains a caveat.",
       "repo": "https://github.com/matthiasSchedel/ancient-conquest-macos",
       "image": "",
-      "imageAlt": "Generated terminal-style panel for Ancient Conquest; no public screenshot was available in the source repository."
+      "imageAlt": "Generated terminal-style panel for Ancient Conquest; no public screenshot was available in the source repository.",
+      "platformLabel": "Whisky/GPTK",
+      "platformClass": "whisky-gptk"
     },
     {
       "slug": "starcraft-bw",
@@ -65,7 +73,9 @@
       "summary": "Intro skip and main-menu render proven; mouse activation still needs a reliable Wine-side input path.",
       "repo": "https://github.com/matthiasSchedel/starcraft-bw-mac",
       "image": "assets/screencaps/starcraft-bw-main-menu.png",
-      "imageAlt": "StarCraft Brood War main menu rendered in CrossOver on Apple Silicon."
+      "imageAlt": "StarCraft Brood War main menu rendered in CrossOver on Apple Silicon.",
+      "platformLabel": "CrossOver",
+      "platformClass": "crossover"
     },
     {
       "slug": "dune-2000",
@@ -77,7 +87,9 @@
       "summary": "Main menu renders in a captureable macOS window; click-driven transition still needs an unlocked interactive session.",
       "repo": "https://github.com/matthiasSchedel/dune-2000-mac",
       "image": "assets/screencaps/dune-2000-main-menu.png",
-      "imageAlt": "Dune 2000 main menu rendered in CrossOver on Apple Silicon."
+      "imageAlt": "Dune 2000 main menu rendered in CrossOver on Apple Silicon.",
+      "platformLabel": "CrossOver",
+      "platformClass": "crossover"
     },
     {
       "slug": "pharaoh",
@@ -89,21 +101,96 @@
       "summary": "Intro/title screen and DirectDraw loop render; advancing past the title screen is blocked on input delivery.",
       "repo": "https://github.com/matthiasSchedel/pharaoh-whisky-m1",
       "image": "assets/screencaps/pharaoh-title-screen.png",
-      "imageAlt": "Pharaoh title screen rendered in Whisky on Apple Silicon."
-    }
-  ],
-  "wishlist": [
+      "imageAlt": "Pharaoh title screen rendered in Whisky on Apple Silicon.",
+      "platformLabel": "Whisky/GPTK",
+      "platformClass": "whisky-gptk"
+    },
     {
       "slug": "caesar-iii",
       "title": "Caesar III",
       "year": 1998,
-      "family": "Impressions city-builder",
-      "whyHard": "Engine twin to Pharaoh, but still needs a clean CrossOver or Whisky recipe and input validation.",
-      "status": "vote to prioritize",
-      "issueTitle": "Wishlist: Caesar III",
-      "issueNumber": 1,
-      "issueUrl": "https://github.com/matthiasSchedel/apple-silicon-classics/issues/1"
+      "status": "partial",
+      "statusLabel": "Title screen",
+      "platformLabel": "CrossOver",
+      "platformClass": "crossover",
+      "recipe": "CrossOver 26",
+      "summary": "Title screen renders through CrossOver; menu progression and gameplay still need input validation.",
+      "repo": "https://github.com/matthiasSchedel/caesar-3-crossover-m1",
+      "image": "assets/screencaps/caesar-iii-title-screen.png",
+      "imageAlt": "Caesar III title screen rendered in CrossOver on Apple Silicon."
     },
+    {
+      "slug": "homm2-fheroes2",
+      "title": "Heroes of Might & Magic II",
+      "year": 1996,
+      "status": "partial",
+      "statusLabel": "Main menu",
+      "platformLabel": "Native arm64",
+      "platformClass": "native-arm64",
+      "recipe": "fheroes2 + demo data",
+      "summary": "Native fheroes2 engine launches with official demo data and renders the main menu.",
+      "repo": "https://github.com/matthiasSchedel/homm2-fheroes2-mac",
+      "image": "assets/screencaps/homm2-fheroes2-main-menu.png",
+      "imageAlt": "Heroes of Might & Magic II main menu rendered through fheroes2 on Apple Silicon."
+    },
+    {
+      "slug": "roller-coaster-tycoon-2",
+      "title": "RollerCoaster Tycoon 2",
+      "year": 2002,
+      "status": "partial",
+      "statusLabel": "Main menu",
+      "platformLabel": "Native arm64",
+      "platformClass": "native-arm64",
+      "recipe": "OpenRCT2 + TTP assets",
+      "summary": "OpenRCT2 native app launches with RCT2 Triple Thrill Pack assets and renders the main menu.",
+      "repo": "https://github.com/matthiasSchedel/roller-coaster-tycoon-2-mac",
+      "image": "assets/screencaps/openrct2-main-menu.png",
+      "imageAlt": "OpenRCT2 main menu rendered on Apple Silicon."
+    },
+    {
+      "slug": "x-com-openxcom",
+      "title": "X-Com: UFO Defense",
+      "year": 1994,
+      "status": "partial",
+      "statusLabel": "Main menu",
+      "platformLabel": "Native arm64",
+      "platformClass": "native-arm64",
+      "recipe": "OpenXcom Extended 8.6.1",
+      "summary": "OXCE 8.6.1 source build launches with X-Com data and renders the main menu.",
+      "repo": "https://github.com/matthiasSchedel/x-com-openxcom-mac",
+      "image": "assets/screencaps/openxcom-main-menu.png",
+      "imageAlt": "OpenXcom Extended main menu rendered on Apple Silicon."
+    },
+    {
+      "slug": "theme-hospital-corsixth",
+      "title": "Theme Hospital",
+      "year": 1997,
+      "status": "partial",
+      "statusLabel": "Main menu",
+      "platformLabel": "Native arm64",
+      "platformClass": "native-arm64",
+      "recipe": "CorsixTH 0.69.2 + demo",
+      "summary": "CorsixTH native app launches with the free playable demo and renders the main menu.",
+      "repo": "https://github.com/matthiasSchedel/theme-hospital-corsixth-mac",
+      "image": "assets/screencaps/corsixth-main-menu.png",
+      "imageAlt": "Theme Hospital main menu rendered through CorsixTH on Apple Silicon."
+    },
+    {
+      "slug": "diablo-i-devilutionx",
+      "title": "Diablo I",
+      "year": 1996,
+      "status": "partial",
+      "statusLabel": "Main menu",
+      "platformLabel": "Native arm64",
+      "platformClass": "native-arm64",
+      "recipe": "DevilutionX + shareware",
+      "summary": "DevilutionX native app launches with official shareware data and renders the main menu.",
+      "repo": "https://github.com/matthiasSchedel/diablo-i-devilutionx-mac",
+      "image": "assets/screencaps/devilutionx-shareware-main-menu.png",
+      "imageAlt": "Diablo Shareware main menu rendered through DevilutionX on Apple Silicon."
+    }
+  ],
+  "wishlist": [
     {
       "slug": "zeus",
       "title": "Zeus: Master of Olympus",

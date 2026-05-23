@@ -22,6 +22,48 @@
       "verdict": "partial",
       "proof": "Intro/title renders through Whisky + cnc-ddraw; input/focus blocked before main menu.",
       "publicRepo": "https://github.com/matthiasSchedel/pharaoh-whisky-m1"
+    },
+    {
+      "slug": "caesar-iii",
+      "round": "r6",
+      "verdict": "partial",
+      "proof": "Title screen visible through CrossOver; input-driven progression still unproven.",
+      "publicRepo": "https://github.com/matthiasSchedel/caesar-3-crossover-m1"
+    },
+    {
+      "slug": "homm2-fheroes2",
+      "round": "r7",
+      "verdict": "partial",
+      "proof": "fheroes2 native engine rendered the main menu with official demo data.",
+      "publicRepo": "https://github.com/matthiasSchedel/homm2-fheroes2-mac"
+    },
+    {
+      "slug": "roller-coaster-tycoon-2",
+      "round": "r7",
+      "verdict": "partial",
+      "proof": "OpenRCT2 native app rendered the main menu with RCT2 TTP assets.",
+      "publicRepo": "https://github.com/matthiasSchedel/roller-coaster-tycoon-2-mac"
+    },
+    {
+      "slug": "x-com-openxcom",
+      "round": "r7",
+      "verdict": "partial",
+      "proof": "OpenXcom Extended 8.6.1 source build rendered the main menu.",
+      "publicRepo": "https://github.com/matthiasSchedel/x-com-openxcom-mac"
+    },
+    {
+      "slug": "theme-hospital-corsixth",
+      "round": "r7",
+      "verdict": "partial",
+      "proof": "CorsixTH 0.69.2 rendered the Theme Hospital demo main menu.",
+      "publicRepo": "https://github.com/matthiasSchedel/theme-hospital-corsixth-mac"
+    },
+    {
+      "slug": "diablo-i-devilutionx",
+      "round": "r7",
+      "verdict": "partial",
+      "proof": "DevilutionX rendered the Diablo Shareware main menu with spawn.mpq.",
+      "publicRepo": "https://github.com/matthiasSchedel/diablo-i-devilutionx-mac"
     }
   ],
   "sourceRepos": [
@@ -31,6 +73,12 @@
     "https://github.com/matthiasSchedel/ancient-conquest-macos",
     "https://github.com/matthiasSchedel/starcraft-bw-mac",
     "https://github.com/matthiasSchedel/dune-2000-mac",
-    "https://github.com/matthiasSchedel/pharaoh-whisky-m1"
+    "https://github.com/matthiasSchedel/pharaoh-whisky-m1",
+    "https://github.com/matthiasSchedel/caesar-3-crossover-m1",
+    "https://github.com/matthiasSchedel/homm2-fheroes2-mac",
+    "https://github.com/matthiasSchedel/roller-coaster-tycoon-2-mac",
+    "https://github.com/matthiasSchedel/x-com-openxcom-mac",
+    "https://github.com/matthiasSchedel/theme-hospital-corsixth-mac",
+    "https://github.com/matthiasSchedel/diablo-i-devilutionx-mac"
   ]
 }
